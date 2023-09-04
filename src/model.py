@@ -162,7 +162,7 @@ def reconstruction_loss(x_input, model):
 
 # batch train step
 @tf.function
-def vae_train_step(x_input, model, optimizer, loss_metric):
+def train_step(x_input, model, optimizer, loss_metric):
     """Train on a given batch updating gradients using an optimizer
 
     Args:
@@ -186,7 +186,7 @@ def vae_train_step(x_input, model, optimizer, loss_metric):
     
 # eval step
 @tf.function
-def vae_eval_step(x_input, model, loss_metric):
+def eval_step(x_input, model, loss_metric):
     """Update validation loss metric
 
     Args:
@@ -202,7 +202,7 @@ def vae_eval_step(x_input, model, loss_metric):
 
     
 # preprocess images for ease of enconding
-def vae_preprocess_images(images):
+def preprocess_images(images):
     """Return after reshaping, normalizing, and thresholding
 
     Args:
