@@ -1,0 +1,13 @@
+services:
+  train:
+    build: ./
+    command: python src/train.py
+    volumes:
+      - ./checkpoint:/usr/app/checkpoint
+      - ./logs:/usr/app/logs
+  evaluate:
+    build: ./
+    command: python src/evaluate.py
+    volumes:
+      - ./checkpoint:/usr/app/checkpoint
+      - ./output:/usr/app/output
