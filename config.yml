@@ -1,0 +1,9 @@
+# training params
+batch_size: 32
+epochs: 20
+tensorboard: true
+learning_rate_steps: (40, 60, 80)
+learning_rate_decay: 0.1
+input_shape: (28, 28, 1)
+num_classes: 10
+latent_dim: 2
